@@ -1,4 +1,3 @@
-
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://restcountries.eu/rest/v2/all");
 xhr.onload = function () {
@@ -8,7 +7,8 @@ xhr.onload = function () {
   for(var i=0;i<data.length;i++)
   {
 
-    console.log(data[i]["name"], data[i]["flag"]);
+    console.log("Name :",data[i]["name"], "Region:", data[i]["region"], "SubRegion:" ,data[i]["subregion"], "Population:", data[i]["population"]);
   }
 };
 xhr.send();
+
